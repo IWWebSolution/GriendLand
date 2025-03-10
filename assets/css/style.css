@@ -10623,7 +10623,7 @@ button:focus {
   margin-bottom: 1.3rem;
 }
 .product-details .product-price {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 .product-details .new-price {
   margin-right: 1rem;
@@ -10697,6 +10697,41 @@ button:focus {
   color: #dadada;
   border-color: #ebebeb;
   background-color: transparent;
+}
+.category-item {
+  position: relative;
+  display: inline-block;
+}
+.category-item img {
+  width: 250px;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  align-items: center;
+}
+.category-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: left;
+}
+
+.subcategory-btn {
+  background-color: #c18f5d; /* Brown shade to match your image */
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+.subcategory-btn:hover {
+  background-color: #a47340;
+}
+.subcategory-buttons a {
+  margin: 8px 0;
 }
 .details-filter-row {
   display: flex;

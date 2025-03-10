@@ -25,6 +25,12 @@
           "-ms-flex"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }

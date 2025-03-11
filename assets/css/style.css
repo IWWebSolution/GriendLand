@@ -1320,26 +1320,8 @@ blockquote.text-white cite span {
   letter-spacing: -0.01em;
   margin-right: 1.5rem;
 }
-.header-intro-clearance .header-bottom .container::before {
-  position: absolute;
-  content: "";
-  left: 28.5rem;
-  height: 1.5rem;
-  width: 0.1rem;
-  top: 50%;
-  background-color: #ccc;
-  transform: translateY(-50%);
-}
-.header-intro-clearance .header-bottom .container::after {
-  position: absolute;
-  content: "";
-  right: 28rem;
-  height: 1.5rem;
-  width: 0.1rem;
-  top: 50%;
-  background-color: #ccc;
-  transform: translateY(-50%);
-}
+
+
 .header-intro-clearance .header-middle .header-right p {
   font-size: 1.1rem;
 }
@@ -5076,7 +5058,7 @@ p {
 .page-header h1 span {
   display: block;
   color: #c96;
-  font-size: 1.6rem;
+  font-size: 3.6rem;
   margin-top: 0.8rem;
 }
 .page-header.page-header-big {
@@ -5087,7 +5069,7 @@ p {
   margin-bottom: 5rem;
 }
 .page-header.page-header-big h1 span {
-  font-size: 1.6rem;
+  font-size: 3.6rem;
   margin-top: 0.4rem;
   letter-spacing: 0;
 }
@@ -8431,6 +8413,11 @@ p {
 .social-icons-colored .social-icon:hover.social-linkedin,
 .social-icons-colored .social-icon:focus.social-linkedin {
   color: #3399cc;
+}
+.index-image {
+  width: 250px; /* Set desired width */
+  height: 188px; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
 }
 .testimonial-icon:before {
   font-family: "molla";

@@ -19,11 +19,11 @@ body {
 }
 ::-moz-selection {
   color: #fff;
-  background-color: #c96;
+  background-color: #91c242;
 }
 ::selection {
   color: #fff;
-  background-color: #c96;
+  background-color: #91c242;
 }
 p {
   margin-bottom: 1.5rem;
@@ -168,7 +168,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #bf8040;
+  color: #70a054;
   text-decoration: none;
 }
 .link-underline {

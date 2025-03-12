@@ -31,7 +31,46 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/plugins/nouislider/nouislider.css">
 </head>
-
+<style>
+    .product-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .thumbnail-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 20px;
+    }
+    .thumbnail {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        border: 2px solid #ccc;
+        transition: border-color 0.3s;
+    }
+    .thumbnail:hover {
+        border-color: #666;
+    }
+    .thumbnail.active {
+        border: 2px solid #c96;
+    }
+    .main-image-container {
+        border: 3px solid #ddd;
+        padding: 10px;
+        display: inline-block;
+    }
+    .main-image {
+        width: 350px;
+        height: auto;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    .main-image:hover {
+        transform: scale(1.1);
+    }
+</style>
 <body>
     <div class="page-wrapper">
         <header class="header header-2 header-intro-clearance">
@@ -206,31 +245,23 @@
                     <h2>Plastic Sprinklers</h2>
                     <div class="product-details-top">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
-                                        <figure class="product-main-image">
-                                            <img class="product-zoom" src="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp" alt="product image">
-
-                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
-                                                <i class="icon-arrows"></i>
-                                            </a>
-                                        </figure><!-- End .product-main-image -->
-
-                                        <div id="product-zoom-gallery-0" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp" alt="product side">
-                                            </a>
-
-                                            <a class="product-gallery-item" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-01.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-01.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-01.webp" alt="product cross">
-                                            </a>
-                                        </div><!-- End .product-image-gallery -->
+                                        <div class="product-item">
+                                            <div class="thumbnail-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp" alt="Agriculture Special Plastic Sprinkler" class="thumbnail" onclick="changeImage(this)">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-01.webp" alt="Agriculture Special Plastic Sprinkler Side" class="thumbnail" onclick="changeImage(this)">
+                                            </div>
+                                            <div class="main-image-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-special-plastic-sprinkler-0.webp" alt="Agriculture Special Plastic Sprinkler" class="main-image" id="mainImage">
+                                            </div>
+                                        </div>
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="product-details">
                                     <h1 class="product-title">Agriculture Special Plastic Sprinkler</h1><!-- End .product-title -->
 
@@ -293,31 +324,23 @@
                                 </div><!-- End .product-details -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
-                                        <figure class="product-main-image">
-                                            <img class="product-zoom" src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp" alt="product image">
-
-                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
-                                                <i class="icon-arrows"></i>
-                                            </a>
-                                        </figure><!-- End .product-main-image -->
-
-                                        <div id="product-zoom-gallery-1" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp" alt="product side">
-                                            </a>
-
-                                            <a class="product-gallery-item" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch01.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch01.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch01.webp" alt="product cross">
-                                            </a>
-                                        </div><!-- End .product-image-gallery -->
+                                        <div class="product-item">
+                                            <div class="thumbnail-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp" alt="Agriculture Plastic Sprinkler 1" class="thumbnail" onclick="changeImage(this)">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch01.webp" alt="Agriculture Plastic Sprinkler 1 Side" class="thumbnail" onclick="changeImage(this)">
+                                            </div>
+                                            <div class="main-image-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-1inch0.webp" alt="Agriculture Plastic Sprinkler 1" class="main-image" id="mainImage">
+                                            </div>
+                                        </div>
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="product-details">
                                     <h1 class="product-title">Agriculture Plastic Sprinkler 1"</h1><!-- End .product-title -->
 
@@ -381,31 +404,23 @@
                                 </div><!-- End .product-details -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
-                                        <figure class="product-main-image">
-                                            <img class="product-zoom" src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp" alt="product image">
-
-                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
-                                                <i class="icon-arrows"></i>
-                                            </a>
-                                        </figure><!-- End .product-main-image -->
-
-                                        <div id="product-zoom-gallery-2" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp" alt="product side">
-                                            </a>
-
-                                            <a class="product-gallery-item" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch01.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch01.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch01.webp" alt="product cross">
-                                            </a>
-                                        </div><!-- End .product-image-gallery -->
+                                        <div class="product-item">
+                                            <div class="thumbnail-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp" alt="Agriculture Plastic Sprinkler 1/2" class="thumbnail" onclick="changeImage(this)">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch01.webp" alt="Agriculture Plastic Sprinkler 1/2 Side" class="thumbnail" onclick="changeImage(this)">
+                                            </div>
+                                            <div class="main-image-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler-halfinch0.webp" alt="Agriculture Plastic Sprinkler 1/2" class="main-image" id="mainImage">
+                                            </div>
+                                        </div>
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="product-details">
                                     <h1 class="product-title">Agriculture Plastic Sprinkler 1/2"</h1><!-- End .product-title -->
 
@@ -467,31 +482,23 @@
                                 </div><!-- End .product-details -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
-                                        <figure class="product-main-image">
-                                            <img class="product-zoom" src="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp" alt="product image">
-
-                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
-                                                <i class="icon-arrows"></i>
-                                            </a>
-                                        </figure><!-- End .product-main-image -->
-
-                                        <div id="product-zoom-gallery-3" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp" alt="product side">
-                                            </a>
-
-                                            <a class="product-gallery-item" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-01.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-01.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-01.webp" alt="product cross">
-                                            </a>
-                                        </div><!-- End .product-image-gallery -->
+                                        <div class="product-item">
+                                            <div class="thumbnail-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp" alt="Agriculture Plastic Sprinkler 1" class="thumbnail" onclick="changeImage(this)">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-01.webp" alt="Agriculture Plastic Sprinkler 1 Side" class="thumbnail" onclick="changeImage(this)">
+                                            </div>
+                                            <div class="main-image-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-impact-sprinkler-0.webp" alt="Agriculture Plastic Sprinkler 1" class="main-image" id="mainImage">
+                                            </div>
+                                        </div>
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="product-details">
                                     <h1 class="product-title">Agriculture Plastic Impact Sprinkler</h1><!-- End .product-title -->
 
@@ -567,22 +574,17 @@
                                 </div><!-- End .product-details -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
-                                        <figure class="product-main-image">
-                                            <img class="product-zoom" src="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp" alt="product image">
-
-                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
-                                                <i class="icon-arrows"></i>
-                                            </a>
-                                        </figure><!-- End .product-main-image -->
-
-                                        <div id="product-zoom-gallery" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp" alt="product side">
-                                            </a>
-                                        </div><!-- End .product-image-gallery -->
+                                        <div class="product-item">
+                                            <div class="thumbnail-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp" alt="Agriculture Plastic Sprinkler 1" class="thumbnail" onclick="changeImage(this)">
+                                            </div>
+                                            <div class="main-image-container">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-mist-sprinkler-0.webp" alt="Agriculture Plastic Sprinkler 1" class="main-image" id="mainImage">
+                                            </div>
+                                        </div>
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
                             </div><!-- End .col-md-6 -->
@@ -640,27 +642,23 @@
                                 </div><!-- End .product-details -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
-                                        <figure class="product-main-image">
-                                            <img class="product-zoom" src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler.webp" alt="product image">
-
-                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
-                                                <i class="icon-arrows"></i>
-                                            </a>
-                                        </figure><!-- End .product-main-image -->
-
-                                        <div id="product-zoom-gallery" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler.webp" data-zoom-image="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler.webp">
-                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler.webp" alt="product side">
-                                            </a>
-                                        </div><!-- End .product-image-gallery -->
+                                        <div class="product-item">
+                                            <div class="thumbnail-container">
+                                                <img src="../assets/images/products/plastic sprinkler/plastic-sprinkler-.webp" alt="Agriculture Plastic Sprinkler 1" class="thumbnail" onclick="changeImage(this)">
+                                                <img src="../assets/images/products/plastic sprinkler/agriculture-plastic-sprinkler.webp" alt="Agriculture Plastic Sprinkler 1 Side" class="thumbnail" onclick="changeImage(this)">
+                                            </div>
+                                            <div class="main-image-container">
+                                                <img src="../assets/images/products/plastic sprinkler/plastic-sprinkler-.webp" alt="Agriculture Plastic Sprinkler 1" class="main-image" id="mainImage">
+                                            </div>
+                                        </div>
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
                             </div><!-- End .col-md-6 -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="product-details">
                                     <h1 class="product-title">Agriculture Plastic Sprinkler</h1><!-- End .product-title -->
 
@@ -965,6 +963,16 @@
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <!-- Main JS File -->
     <script src="../assets/js/main.js"></script>
+    <script>
+        function changeImage(imgElement) {
+            let mainImage = imgElement.closest('.product-item').querySelector('.main-image');
+            mainImage.src = imgElement.src;
+    
+            let thumbnails = imgElement.closest('.thumbnail-container').querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            imgElement.classList.add('active');
+        }
+    </script>
 </body>
 
 

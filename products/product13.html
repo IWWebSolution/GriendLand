@@ -31,7 +31,46 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/plugins/nouislider/nouislider.css">
 </head>
-
+<style>
+    .product-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .thumbnail-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 20px;
+    }
+    .thumbnail {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        border: 2px solid #ccc;
+        transition: border-color 0.3s;
+    }
+    .thumbnail:hover {
+        border-color: #666;
+    }
+    .thumbnail.active {
+        border: 2px solid #c96;
+    }
+    .main-image-container {
+        border: 3px solid #ddd;
+        padding: 10px;
+        display: inline-block;
+    }
+    .main-image {
+        width: 350px;
+        height: auto;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    .main-image:hover {
+        transform: scale(1.1);
+    }
+</style>
 <body>
     <div class="page-wrapper">
         <header class="header header-2 header-intro-clearance">
@@ -965,8 +1004,15 @@
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <!-- Main JS File -->
     <script src="../assets/js/main.js"></script>
+    <script>
+        function changeImage(imgElement) {
+            let mainImage = imgElement.closest('.product-item').querySelector('.main-image');
+            mainImage.src = imgElement.src;
+    
+            let thumbnails = imgElement.closest('.thumbnail-container').querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            imgElement.classList.add('active');
+        }
+    </script>
 </body>
-
-
-<!-- molla/product-category.html  22 Nov 2019 09:55:05 GMT -->
 </html>
